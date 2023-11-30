@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Portfolio
+
+
+@{
+    ViewData["Title"] = "AddProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Proje Ekleme Sayfası</h3>
+</div>
+
+<form class="form-group" method="post">
+    <br />
+    <label>Proje İsmi</label>
+    <input type="text" name="Name" value="" class="form-control" />
+    <br />
+    <label>Görsel 1</label>
+    <input type="text" name="ImageUrl" value="" class="form-control" />
+    <br />
+    <label>Görsel 2</label>
+    <input type="text" name="ImageUrl2" value="" class="form-control" />
+    <br />
+    <label>Proje URL</label>
+    <input type="text" name="ProjectUrl" value="" class="form-control" />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
+
