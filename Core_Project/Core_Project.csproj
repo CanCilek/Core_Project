@@ -17665,4 +17665,9 @@
     <TypeScriptCompile Include="wwwroot\corona-free-dark-bootstrap-admin-template-1.0.0\template\node_modules\yargs\node_modules\strip-ansi\index.d.ts" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Writer\Data\" />
+    <Folder Include="Areas\Writer\Models\" />
+  </ItemGroup>
+
 </Project>
