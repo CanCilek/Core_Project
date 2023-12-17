@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+
+    @await Component.InvokeAsync("FeatureStatistics")
+    <div class="row">
+        <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Bütçe Geçmişi</h4>
+                    <canvas id="transaction-history" class="transaction-chart"></canvas>
+                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                        <div class="text-md-center text-xl-left">
+                            <h6 class="mb-1">Proje Ödemeleri</h6>
+                            <p class="text-muted mb-0">12 Aralık 2023</p>
+                        </div>
+                        <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+                            <h6 class="font-weight-bold mb-0">123456 TL</h6>
+                        </div>
+                    </div>
+                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                        <div class="text-md-center text-xl-left">
+                            <h6 class="mb-1">Reklam Geliri</h6>
+                            <p class="text-muted mb-0">12 Aralık 2023</p>
+                        </div>
+                        <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+                            <h6 class="font-weight-bold mb-0">987654 TL</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @await Component.InvokeAsync("LastFiveProjects")
+
+
+
+
+    </div>
+    @await Component.InvokeAsync("StatisticsDashboard")
+    @await Component.InvokeAsync("ProjectList")
+
+    <div class="row">
+        @await Component.InvokeAsync("MessageList")
+        @await Component.InvokeAsync("SlideList")
+        @await Component.InvokeAsync("ToDoListPanel")
+
+
+    </div>
+    @await Component.InvokeAsync("VisitorMap")
+</body>
+</html>

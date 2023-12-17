@@ -1,20 +1,26 @@
-﻿
+﻿@model EntityLayer.Concrete.Skill
 @{
     ViewData["Title"] = "AddSkill";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Yetenek Ekleme Sayfası</h3>
-</div>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
 
-<form class="form-group" method="post">
-    <br />
-    <label>Yetenek Başlığı</label>
-    <input type="text" name="Title" value="" class="form-control"/>
-    <br />
-    <label>Oran</label>
-    <input type="text" name="Value" value="" class="form-control"/>
-    <br />
-    <button class="btn btn-info">Kaydet</button>
-</form>
+            <p class="card-description"> Yeni Deneyim Ekleme Paneli </p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label>Başlık</label>
+                    <input type="text" class="form-control" name="Title">
+                </div>
+                <div class="form-group">
+                    <label>Değer</label>
+                    <input type="text" class="form-control" name="Value">
+                </div>                          
+                <button type="submit" class="btn btn-primary mr-2">Kaydet</button>
+                <button class="btn btn-dark">İptal</button>
+            </form>
+        </div>
+    </div>
+</div>
