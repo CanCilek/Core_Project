@@ -13,6 +13,10 @@ namespace BusinessLayer.Concrete
     {
         ISocialMediaDal _socialMediaDal;
 
+        public SocialMediaManager()
+        {
+        }
+
         public SocialMediaManager(ISocialMediaDal socialMediaDal)
         {
             _socialMediaDal = socialMediaDal;
@@ -36,6 +40,11 @@ namespace BusinessLayer.Concrete
         public List<SocialMedia> TGetList()
         {
             return _socialMediaDal.GetList();
+        }
+
+        public List<SocialMedia> TGetListByFilter()
+        {
+            throw new NotImplementedException();
         }
 
         public void TUpdate(SocialMedia t)

@@ -13,6 +13,10 @@ namespace BusinessLayer.Concrete
     {
         ISkillDal _skillDal;
 
+        public SkillManager()
+        {
+        }
+
         public SkillManager(ISkillDal skillDal)
         {
             _skillDal = skillDal;
@@ -36,6 +40,11 @@ namespace BusinessLayer.Concrete
         public List<Skill> TGetList()
         {
             return _skillDal.GetList();
+        }
+
+        public List<Skill> TGetListByFilter()
+        {
+            throw new NotImplementedException();
         }
 
         public void TUpdate(Skill t)
