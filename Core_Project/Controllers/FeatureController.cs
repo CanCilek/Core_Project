@@ -16,9 +16,6 @@ namespace Core_Project.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-
-            ViewBag.v2 = "Öne Çıkanlar";
-            ViewBag.v3 = "Öne Çıkanlar Sayfası";
             var values = featureManager.TGetByID(1);
             return View(values);
         }

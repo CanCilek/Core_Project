@@ -6,44 +6,50 @@
     Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Proje Düzenleme Sayfası</h3>
-</div>
 
 
 @using (Html.BeginForm("EditProject", "Portfolio", FormMethod.Post))
 {
-    @Html.HiddenFor(x => x.PortfolioID)
-    <br />
-    <label>Proje İsmi</label>
-    <input type="text" name="Name" value="@Model.Name" class="form-control" />
-    @Html.ValidationMessageFor(x => x.Name)
-    <br />
-    <label>Image Url</label>
-    <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" />
-    @Html.ValidationMessageFor(x => x.ImageUrl)
-    <br />
-    <label>Image Url 2</label>
-    <input type="text" name="ImageUrl2" value="@Model.ImageUrl2" class="form-control" />
-    @Html.ValidationMessageFor(x => x.ImageUrl2)
-    <br />
-    <label>Proje URL</label>
-    <input type="text" name="ProjectUrl" value="@Model.ProjectUrl" class="form-control" />
-    @Html.ValidationMessageFor(x => x.ProjectUrl)
-    <br />
-    <label>Ücret</label>
-    <input type="text" name="Ucret" value="@Model.Ucret" class="form-control" />
-    @Html.ValidationMessageFor(x => x.Ucret)
-    <br />
-    <label>Tamamlanma Oranı</label>
-    <input type="text" name="Oran" value="@Model.Oran" class="form-control" />
-    @Html.ValidationMessageFor(x => x.Oran)
-    <br />
-    <label>Platform</label>
-    <input type="text" name="Platform" value="@Model.Platform" class="form-control" />
-    @Html.ValidationMessageFor(x => x.Platform)
-    <br />
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
 
-    <button class="btn btn-info">Güncelle</button>
+                <p class="card-description"> Proje Düzenleme Paneli </p>
+                <form class="forms-sample">
+                    @Html.HiddenFor(x => x.PortfolioID)
+                    <br />
+                    <label>Proje İsmi</label>
+                    <input type="text" name="Name" value="@Model.Name" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.Name)
+                    <br />
+                    <label>Image Url</label>
+                    <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.ImageUrl)
+                    <br />
+                    <label>Image Url 2</label>
+                    <input type="text" name="ImageUrl2" value="@Model.ImageUrl2" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.ImageUrl2)
+                    <br />
+                    <label>Proje URL</label>
+                    <input type="text" name="ProjectUrl" value="@Model.ProjectUrl" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.ProjectUrl)
+                    <br />
+                    <label>Ücret</label>
+                    <input type="text" name="Ucret" value="@Model.Ucret" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.Ucret)
+                    <br />
+                    <label>Tamamlanma Oranı</label>
+                    <input type="text" name="Oran" value="@Model.Oran" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.Oran)
+                    <br />
+                    <label>Platform</label>
+                    <input type="text" name="Platform" value="@Model.Platform" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.Platform)
+                    <br />
 
+                    <button class="btn btn-info">Güncelle</button>
+                </form>
+            </div>
+        </div>
+    </div>
 }

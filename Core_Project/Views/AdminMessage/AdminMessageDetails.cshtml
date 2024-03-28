@@ -1,0 +1,43 @@
+﻿@model EntityLayer.Concrete.WriterMessage
+@{
+    ViewData["Title"] = "AdminMessageDetails";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+
+            <p class="card-description">Mesaj Detay Sayfası</p>
+            <form class="forms-sample">
+                <div class="form-group" style="display:none">
+                    <label>ID</label>
+                    <input type="text" class="form-control" value="@Model.WriterMessageID" name="ExperienceID">
+                </div>
+                <div class="form-group">
+                    <label>Başlık</label>
+                    <input type="text" class="form-control" value="@Model.Subject" name="Name">
+                </div>
+                <div class="form-group">
+                    <label>Gönderen</label>
+                    <input type="text" class="form-control" value="@Model.SenderName" name="Name">
+                </div>
+                <div class="form-group">
+                    <label>Alıcı</label>
+                    <input type="text" class="form-control" value="@Model.ReceiverName" name="Name">
+                </div>
+                <div class="form-group">
+                    <label>Tarih</label>
+                    <input type="text" class="form-control" value="@Model.Date" name="Date">
+                </div>
+                <div class="form-group">
+                    <label>Mesaj</label>
+                    <input type="text" class="form-control" value="@Model.MessageContent" name="Description">
+                </div>
+                <a asp-action="ReceiverMessageList" class="btn btn-primary" mr-2>Admin Gelen Mesajlar</a>
+                <a asp-action="SenderMessageList" class="btn btn-warning" mr-2>Admin Giden Mesajlar</a>
+                
+            </form>
+        </div>
+    </div>
+</div>

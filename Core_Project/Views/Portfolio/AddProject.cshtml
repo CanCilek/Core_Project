@@ -6,38 +6,45 @@
     Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Proje Ekleme Sayfası</h3>
-</div>
 
-<form class="form-group" method="post">
-    <br />
-    <label>Proje İsmi</label>
-    <input type="text" name="Name" value="" class="form-control" />
-    @Html.ValidationMessageFor(x => x.Name)
-    <br />
-    <label>Görsel 1</label>
-    <input type="text" name="ImageUrl" value="" class="form-control" />
-    @Html.ValidationMessageFor(x => x.ImageUrl)
-    <br />
-    <label>Görsel 2</label>
-    <input type="text" name="ImageUrl2" value="" class="form-control" />
-    @Html.ValidationMessageFor(x => x.ImageUrl2)
-    <br />
-    <label>Proje URL</label>
-    <input type="text" name="ProjectUrl" value="" class="form-control" />
-    @Html.ValidationMessageFor(x => x.ProjectUrl)
-    <br />
-    <label>Ücret</label>
-    <input type="text" name="Ucret" value="" class="form-control" />
-    @Html.ValidationMessageFor(x => x.Ucret)
-    <br />
-    <label>Tamamlanma Oranı</label>
-    <input type="text" name="Oran" value="" class="form-control" />
-    @Html.ValidationMessageFor(x => x.Oran)
-<br />
+@using (Html.BeginForm("AddProject", "Portfolio", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
 
-    <button class="btn btn-info">Kaydet</button>
-</form>
+                <p class="card-description"> Yeni Proje Ekleme Paneli </p>
+                <form class="forms-sample">
+                    <br />
+                    <label>Proje İsmi</label>
+                    <input type="text" name="Name" value="" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.Name)
+                    <br />
+                    <label>Görsel 1</label>
+                    <input type="text" name="ImageUrl" value="" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.ImageUrl)
+                    <br />
+                    <label>Görsel 2</label>
+                    <input type="text" name="ImageUrl2" value="" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.ImageUrl2)
+                    <br />
+                    <label>Proje URL</label>
+                    <input type="text" name="ProjectUrl" value="" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.ProjectUrl)
+                    <br />
+                    <label>Ücret</label>
+                    <input type="text" name="Ucret" value="" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.Ucret)
+                    <br />
+                    <label>Tamamlanma Oranı</label>
+                    <input type="text" name="Oran" value="" class="form-control" />
+                    @Html.ValidationMessageFor(x => x.Oran)
+                    <br />
 
+                    <button class="btn btn-info">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
 

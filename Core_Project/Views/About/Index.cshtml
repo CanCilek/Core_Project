@@ -3,39 +3,60 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Hakkımda Sayfası Düzenleme Sayfası</h3>
-</div>
 
-
-@using (Html.BeginForm("Index", "About", "Post"))
+@using (Html.BeginForm("Index", "About", FormMethod.Post))
 {
-    @Html.HiddenFor(x => x.AboutID)
-    <br />
-    <label>Başlığı</label>
-    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-    <br />
-    <label>AÇıklama</label>
-    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
-    <br />
-    <label>Mail Adresi</label>
-    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
-    <br />
-    <label>Telefon Numarası</label>
-    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
-    <br />
-    <label>Adres</label>
-    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
-    <br />
-    <label>Yaş</label>
-    @Html.TextBoxFor(x => x.Age, new { @class = "form-control" })
-    <br />
-    <label>ImageURL</label>
-    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-    <br />
-    <button class="btn btn-success">Kaydet</button>
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <p class="card-description">Hakkımda Düzenleme Paneli</p>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="text" class="form-control" value="@Model.AboutID" name="AboutID">
+                    </div>
+                    <div class="form-group">
+                        <label>Başlık</label>
+                        <input type="text" class="form-control" value="@Model.Title" name="Title">
+                    </div>
+                    <div class="form-group">
+                        <label>Yaş</label>
+                        <input type="text" class="form-control" value="@Model.Age" name="Age">
+                    </div>
+                    <div class="form-group">
+                        <label>Mail</label>
+                        <input type="text" class="form-control" value="@Model.Mail" name="Mail">
+                    </div>
+                    <div class="form-group">
+                        <label>Adres</label>
+                        <input type="text" class="form-control" value="@Model.Address" name="Address">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon</label>
+                        <input type="text" class="form-control" value="@Model.Phone" name="Phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Görsel URL</label>
+                        <input type="text" class="form-control" value="@Model.ImageUrl" name="ImageUrl">
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label>Açıklama</label>
+                        <input type="text" class="form-control" value="@Model.Description" name="Description">
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Kaydet</button>
+                    <button class="btn btn-dark">İptal</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 }

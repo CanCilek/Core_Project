@@ -1,0 +1,41 @@
+﻿@model EntityLayer.Concrete.Message
+@{
+    ViewData["Title"] = "ContactDetails";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <p class="card-description">Mesaj Detay Sayfası</p>
+                <form class="forms-sample">
+                    <div class="form-group" style="display:none">
+                        <label>ID</label>
+                        <input type="text" class="form-control" value="@Model.MessageID" name="ExperienceID" >
+                    </div>
+                    <div class="form-group">
+                        <label>Başlık</label>
+                        <input type="text" class="form-control" value="@Model.Name" name="Name" >
+                    </div>
+                    <div class="form-group">
+                        <label>Tarih</label>
+                        <input type="text" class="form-control" value="@Model.Date" name="Date" >
+                    </div>
+                    <div class="form-group">
+                        <label>Mail</label>
+                        <input type="text" class="form-control" value="@Model.Mail" name="Mail" >
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label>Açıklama</label>
+                        <input type="text" class="form-control" value="@Model.Content" name="Description">
+                    </div>
+                    <a asp-action="Index" class="btn btn-primary" mr-2>İletişim Sayfası</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
